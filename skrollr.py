@@ -4,7 +4,7 @@ root = Tk()
 scrollbar = Scrollbar(root)
 scrollbar.pack( side = RIGHT, fill=Y )
 
-mylist = Listbo(root, yscrollcommand = scrollbar.set )
+mylist = Listbox(root, yscrollcommand = scrollbar.set )
 for line in range(100):
    mylist.insert(END, "This is line number " + str(line))
 
