@@ -1,7 +1,7 @@
 from Tkinter import *
 
 root = Tk()
-scrollbar = Scrollbar(root)
+scrollbar = Scrollbar(rot)
 scrollbar.pack( side = RIGHT, fill=Y )
 
 mylist = Listbox(root, yscrollcommand = scrollbar.set )
