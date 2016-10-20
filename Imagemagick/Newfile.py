@@ -1,17 +1,17 @@
-from wand.image import Image
-from wand.drawing import Drawing
-from wand.color import Color
+import urllib2
 
-with Drawing() as draw:
-    draw.stroke_color = Color('black')
-    draw.stroke_width = 2
-    draw.fill_color = Color('white')
-    points = [(10,50),
-              (50,10),
-              (50,90),  
-              (90,50)]
-    draw.bezier(points)
-    with Image(width=100,
-               height=100,
-               background=Color('lightblue')) as image:
-        draw(image)
+from wand.image import Image
+from wand.display import display
+
+
+fg_url = 'http://i.stack.imgur.com/Mz9y0.jpg'
+bg_url = 'http://i.stack.imgur.com/TAcBA.jpg'
+
+bg = urllib2.urlopen(bg_url)
+with Image(file=bg) as bg_img:
+    fg = urllib2.urlopen(fg_url)
+    with Image(file=fg) as fg_img:
+        bg_img.composite(fg_img, left=400, top=250)
+    fg.close()
+    display(bg_img)
+bg.close()
