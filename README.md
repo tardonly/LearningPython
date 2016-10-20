@@ -1,2 +1,2 @@
 # Project_Python
-This repository contains different projects on python.
+This repository contains my work on python.
