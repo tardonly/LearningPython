@@ -1,10 +1,11 @@
 import urllib2
+import random
 
 from wand.image import Image
 from wand.display import display
 
 
-fg_url = 'http://bit.ly/2ek2g6j'
+fg_url = fg_url = 'http://emojidictionary.emojifoundation.com/img/emoji{}.jpg'.format(random.randint(1, 800))
 bg_url = 'http://bit.ly/2ewFjd5'
 
 bg = urllib2.urlopen(bg_url)
