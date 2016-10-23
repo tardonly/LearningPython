@@ -11,7 +11,7 @@ bg = urllib2.urlopen(bg_url)
 with Image(file=bg) as bg_img:
     fg = urllib2.urlopen(fg_url)
     with Image(file=fg) as fg_img:
-        bg_img.composite(fg_img, left=320, top=240)
+        bg_img.composite(fg_img, left=214, top=160)
     fg.close()
     display(bg_img)
 bg.close()
