@@ -5,7 +5,7 @@ from wand.image import Image
 from wand.display import display
 
 
-fg_url = fg_url = 'http://emojidictionary.emojifoundation.com/img/emoji{}.jpg'.format(random.randint(1, 800))
+fg_url = fg_url = 'http://emojidictionary.emojifoundation.com/img/emoji{}.jpg'.format(random.randint(1, 800)) #random emoji
 bg_url = 'http://bit.ly/2ewFjd5'
 
 bg = urllib2.urlopen(bg_url)
