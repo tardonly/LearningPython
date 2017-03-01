@@ -20,3 +20,4 @@ do
 	git commit -m "Addes some patches"
 	git commit -am "`echo ${list[$RANDOM % ${#list[@]} ]}`"
 done
+git push origin master
