@@ -13,7 +13,7 @@ Set_Alarm = raw_input("Set the website alarm as H:M:S:")
  
 # Second Input: It is the URL that you want
 # to open on the given time.
-url = raw_input("Enter the website you want to open:")
+url = raw_input("Enter the website you want to open in google.com format:")
  
 # This is the actual time that we will use to print.
 Actual_Time = time.strftime("%I:%M:%S")
@@ -33,4 +33,4 @@ if (Actual_Time == Set_Alarm):
  
     # We are calling the open()
     # function from the webrowser module.
-    webbrowser.open(url)
+    webbrowser.open("http://"+url)
